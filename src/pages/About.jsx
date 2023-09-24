@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import GoogleMapReact from 'google-map-react'
-require('dotenv').config()
-
+import dotenv from 'dotenv'
+dotenv.config()
 const AnyReactComponent = ({ text }) => <div>{text}</div>
 
 export function About() {
