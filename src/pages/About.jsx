@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import GoogleMapReact from 'google-map-react'
-import dotenv from 'dotenv'
-dotenv.config()
+import { API_KEY } from './../../env'
 const AnyReactComponent = ({ text }) => <div>{text}</div>
 
 export function About() {
@@ -26,7 +25,7 @@ export function About() {
       </button>
       <div style={{ height: '500px', width: '500px' }}>
         <GoogleMapReact
-          bootstrapURLKeys={{ key: process.env.API_KEY }}
+          bootstrapURLKeys={{ key: API_KEY }}
           center={coordinates}
           defaultZoom={zoom}
           onClick={handleClick}
